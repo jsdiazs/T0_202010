@@ -41,6 +41,6 @@ public interface IArregloDinamico {
 	 * @param dato Objeto de eliminacion en el arreglo
 	 * @return dato eliminado
 	 */
-	String eliminar( String dato );
+	boolean eliminar(String dato );
 
 }
