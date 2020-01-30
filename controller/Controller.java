@@ -33,11 +33,11 @@ public class Controller {
 		while( !fin ){
 			view.printMenu();
 
-			int option = lector.nextInt();
+			int option = lector.nextIntInt();
 			switch(option){
 				case 1:
 					view.printMessage("--------- \nCrear Arreglo \nDar capacidad inicial del arreglo: ");
-				    int capacidad = lector.nextInt();
+				    int capacidad = lector.nextIntInt();
 				    modelo = new Modelo(capacidad); 
 				    view.printMessage("Arreglo Dinamico creado");
 				    view.printMessage("Numero actual de elementos " + modelo.darTamano() + "\n---------");						
@@ -45,7 +45,7 @@ public class Controller {
 
 				case 2:
 					view.printMessage("--------- \nDar cadena (simple) a ingresar: ");
-					dato = lector.next();
+					dato = lector.nextInt();
 					modelo.agregar(dato);
 					view.printMessage("Dato agregado");
 					view.printMessage("Numero actual de elementos " + modelo.darTamano() + "\n---------");						
@@ -53,7 +53,7 @@ public class Controller {
 
 				case 3:
 					view.printMessage("--------- \nDar cadena (simple) a buscar: ");
-					dato = lector.next();
+					dato = lector.nextInt();
 					respuesta = modelo.buscar(dato);
 					if ( respuesta != null)
 					{
@@ -68,7 +68,7 @@ public class Controller {
 
 				case 4:
 					view.printMessage("--------- \nDar cadena (simple) a eliminar: ");
-					dato = lector.next();
+					dato = lector.nextInt();
 					respuesta = modelo.eliminar(dato);
 					if ( respuesta != null)
 					{
