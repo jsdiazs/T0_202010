@@ -88,12 +88,12 @@ public class ArregloDinamico implements IArregloDinamico {
 					if(elementos[j].equals(dato))
 					{
 						encontro=true;
-						elementos[i]=null;
+						elementos[j]=null;
 						System.out.println("Elemento borrado");
 					}
 				}
 			}
-			return eliminar;
+			return encontro;
 		}
 
 
